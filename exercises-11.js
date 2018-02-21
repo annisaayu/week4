@@ -1,7 +1,3 @@
-/*
-  AGE JADI NaN...
-*/
-
 function changeMe(arr) {
   let arrLen=arr.length;
   if(arrLen===0){
