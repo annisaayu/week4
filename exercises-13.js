@@ -20,8 +20,6 @@ function countProfit(shoppers) {
     for(let j=0; j<shoppers.length; j++){
       if(shoppers[j].product === listBarang[i][0] && shoppers[j].amount <= changeItem){
         result[i].shoppers.push(shoppers[j].name)
-        console.log(shoppers[j].product);
-        console.log(shoppers[j].amount);
         console.log(changeItem-=shoppers[j].amount);
       }
     }
