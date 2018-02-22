@@ -2,21 +2,20 @@ function kaliTerusRekursif(angka) {
   let str=angka.toString();
   if(str.length===1){
     return angka;
+  }
+  let num=1;
+  for(let i=0;i<str.length;i++){
+    num = num * parseInt(str[i]);
+  }
+  num = num.toString();
+  if(num.length === 1){
+    return parseInt(num)
   }else{
-    let num=1;
-    for(let i=0;i<str.length;i++){
-      num = num * parseInt(str[i]);
-    }
-    num = num.toString();
-    if(num.length === 1){
-      return parseInt(num)
-    }else{
-      let lastNum = num.slice(-1);
-      let changeNum = num.slice(0,-1);
-      lastNum = parseInt(lastNum);
-      changeNum = parseInt(changeNum);
-      return lastNum * kaliTerusRekursif(changeNum);
-    }
+    let lastNum = num.slice(-1);
+    let changeNum = num.slice(0,-1);
+    lastNum = parseInt(lastNum);
+    changeNum = parseInt(changeNum);
+    return kaliTerusRekursif(lastNum * changeNum);
   }
 }
 
