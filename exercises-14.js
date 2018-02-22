@@ -13,6 +13,9 @@ function sorting(arrNumber) {
 }
 
 function getTotal(arrNumber) {
+  if(arrNumber.length===0){
+    return '';
+  }
   let largestNum=arrNumber[arrNumber.length-1];
   let total=0;
   for(let i=0; i<arrNumber.length;i++){
